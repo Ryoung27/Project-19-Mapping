@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate {func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    // 1
+    // Identifies the capital
     let identifier = "Capital"
     
     // 2
@@ -34,7 +34,7 @@ class ViewController: UIViewController, MKMapViewDelegate {func mapView(_ mapVie
         return annotationView
     }
     
-    // 7
+    //  This brings the names into the alert section
     return nil
     }
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -46,7 +46,7 @@ class ViewController: UIViewController, MKMapViewDelegate {func mapView(_ mapVie
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
     }
-
+// This list a bunch of capital cities, more could be added.
     override func viewDidLoad() {
         super.viewDidLoad()
         let london = Capital(title: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), info: "Home to the 2012 Summer Olympics.")
